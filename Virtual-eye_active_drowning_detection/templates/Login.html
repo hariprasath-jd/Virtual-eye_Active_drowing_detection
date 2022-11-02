@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page-Virtual Eye</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="loginpage.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <img class="logo" src="/home/hari/software/Login Form - No JavaScript/final/finaled/static/css/vE1.png" usemap="#workmap">
+        <map name="workmap">
+           <area shape="rect" coords="0,0,273,736" href="Base.html">
+        </map>
+        <ul>
+          <li><a class="active" href="#">Login</a></li>
+          <li><a href="Registration.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <div class="center">
+      <h1>Welcome Back</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required id="Username">
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required id="Password">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login" onclick="validate()">
+        <div class="signup_link">
+          Not a member? <a href="Registration.html">Register</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
+
