@@ -9,14 +9,14 @@
 <body>
 	<div class="wrapper">
 			<nav class="navbar">
-				<img class="logo" src="/home/hari/software/Login Form - No JavaScript/final/finaled/static/css/vE1.png" usemap="#workmap">
+				<img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
 				<map name="workmap">
- 					 <area shape="rect" coords="0,0,273,736" href="Base.html">
+ 					 <area shape="rect" coords="0,0,273,736" href="{{ url_for('home') }}">
  				</map>
  				<ul>
-					<li><a href="/home/hari/software/Login Form - No JavaScript/final/finaled/templates/index.html">Home</a></li>
+					<li><a href="{{ url_for('home') }}">Home</a></li>
 					<li><a class="active" href="#">Demo</a></li>
-					<li><a href="Logout.html">Logout</a></li>
+					<li><a href="{{ url_for('out') }}">Logout</a></li>
 				</ul>
 			</nav>
 			<div class="center">
@@ -29,10 +29,11 @@ Identifying the drowned
 person in the crowd will be difficult from
 above.</p>
 			</div>
-			
+			<form class="grid" action="/afterlogin" method="POST">
 			<div class="center">
-				<button>Start Demo</button> 
+				<center><input type="submit" value="Start Demo"></center> 
 			</div>
+			</form>
 			<div class="center">
 				<p1>Click the "Start demo" button to start a quick demo.</p1>
 			</div>

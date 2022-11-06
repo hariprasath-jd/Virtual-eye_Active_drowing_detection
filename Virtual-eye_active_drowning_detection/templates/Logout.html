@@ -3,29 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/home/hari/software/Login Form - No JavaScript/final/finaled/static/styleabout.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_style.css') }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>About page-Virtual Eye</title>
 </head>
 <body>
 	<div class="wrapper">
 			<nav class="navbar">
-				<img class="logo" src="/home/hari/software/Login Form - No JavaScript/final/finaled/static/css/vE1.png" usemap="#workmap">
+				<img class="logo" src="{{ url_for('static', filename='css/vE1.png') }}" usemap="#workmap">
 				<map name="workmap">
- 					 <area shape="rect" coords="0,0,273,736" href="Base.html">
+ 					 <area shape="rect" coords="0,0,273,736" href="{{ url_for('base') }}">
  				</map>
 				<ul>
-					<li><a class="active" href="#">Home</a></li>
-					<li><a href="/home/hari/software/Login Form - No JavaScript/Login.html">Login</a></li>
-					<li><a href="Registration.html">Register</a></li>
-					<li><a href="/home/hari/software/Login Form - No JavaScript/final/Demo.html">Demo</a></li>
+					<li><a href="{{url_for('signin')}}">Login</a></li>
 				</ul>
 			</nav>
 			<div class="center">
-			<h1>Welcome To <i>VIRTUAL EYE :)</i></h1>
+			<h1>Thanks for using Virtual Eye</h1>
 			<div class="buttons">
-			<button><a href="about.html">About Us..</a></button>
-			<button class="btn2"><a href="">Try US!</a></button>
+			<button class="btn2"><a href="{{ url_for('signin') }}">Login</a></button>
 		</div>
 		</div>
 

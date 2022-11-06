@@ -81,7 +81,7 @@
 	border-radius: 12px;
 	background: rgba(173, 216, 230, 0.5);
 }
-.center button {
+.center input {
 	position: relative;
 	align-content: center;
 	height: 50px;
@@ -105,7 +105,7 @@ a {
 .buttons{
 	margin-left: 25px;
 }
-.center button:hover{
+.center input:hover{
 	background: #0b2835;
 }
 .center p1 {

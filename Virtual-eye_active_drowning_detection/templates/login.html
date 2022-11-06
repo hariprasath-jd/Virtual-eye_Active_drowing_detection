@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registration Page-Virtual Eye</title>
+    <title>Login Page-Virtual Eye</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="loginpage.js"></script>
@@ -15,30 +15,19 @@
            <area shape="rect" coords="0,0,273,736" href="{{ url_for('base') }}">
         </map>
         <ul>
-          <li><a  href="{{ url_for('signin') }}">Login</a></li>
-          <li><a class="active" href="#">Register</a></li>
+          <li><a class="active" href="#">Login</a></li>
+          <li><a href="{{ url_for('reg') }}">Register</a></li>
         </ul>
       </nav>
     </div>
     <div class="wrapper">
       <div class="center">
-      <h1>Registration</h1>
-      <form class="grid" action="/afterlogin" method="POST">
+      <h1>Welcome Back</h1>
+        <form class="grid" action="/afterlogin" method="POST">
         <div class="txt_field">
-          <input type="text" required id="Username" Username = "user">
+          <input type="text" required id="_id" _id = "_id">
           <span></span>
           <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input type="text" required id="email" email = "_id">
-          <span></span>
-          <label>Email ID</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required id="Password" password = "psw">
-          <span></span>
-          <label>Password</label>
-        </div>
         </div>
         {% if pred %}
             <center>
@@ -46,12 +35,18 @@
             </center> 
 
           {% endif %}
-        <input type="submit" value="Submit" >
+        <div class="txt_field">
+          <input type="password" required id="psw" psw = "psw"  >
+          <span></span>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Login" onclick="validate()">
         <div class="signup_link">
-          Alerady registered? <a href="{{ url_for('signin') }}">Sign in</a>
+          Not a member? <a href="{{ url_for('reg') }}">Register</a>
         </div>
       </form>
       </div>
     </div>
   </body>
 </html>
+
